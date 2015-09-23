@@ -1,0 +1,15 @@
+* source P2
+C_C2         0 N13783  100p  
+M_M6         N09421 N13783 0 0 Mbreakn           
+C_C1         0 N03164  100p  
+V_V4         N13783 0  
++PULSE 4 0 20u 50u 50u .1m 10m
+M_M15         N13783 N03164 N14091 N14091 Mbreakp           
+M_M14         N03164 N09421 N08874 N08874 Mbreakp           
+V_V1         N13771 0 5Vdc
+M_M7         N03164 N09421 0 0 Mbreakn           
+V_V2         N08874 0 5Vdc
+C_C0         0 N09421  100p  
+M_M8         N13783 N03164 0 0 Mbreakn           
+M_M13         N09421 N13783 N13771 N13771 Mbreakp           
+V_V3         N14091 0 5Vdc

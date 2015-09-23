@@ -1,0 +1,133 @@
+
+**** 05/03/15 22:30:43 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-t"  [ F:\Users\ROOT\Documents\orcad\elecdigital\problem1 - asli\p2-schematic1-t.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "p2-schematic1-t.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+.LIB ".\p2.lib" 
+* From [PSPICE NETLIST] section of F:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 .01 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\p2-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING p2-SCHEMATIC1.net ****
+* source P2
+C_C2         0 N13783  100p  
+M_M6         N09421 N13783 0 0 Mbreakn           
+C_C1         0 N03164  100p  
+V_V4         N13783 0  
++PULSE 4 0 20u 50u 50u .1m 10m
+M_M15         N13783 N03164 N14091 N14091 Mbreakp           
+M_M14         N03164 N09421 N08874 N08874 Mbreakp           
+V_V1         N13771 0 5Vdc
+M_M7         N03164 N09421 0 0 Mbreakn           
+V_V2         N08874 0 5Vdc
+C_C0         0 N09421  100p  
+M_M8         N13783 N03164 0 0 Mbreakn           
+M_M13         N09421 N13783 N13771 N13771 Mbreakp           
+V_V3         N14091 0 5Vdc
+
+**** RESUMING p2-schematic1-t.sim.cir ****
+.END
+
+**** 05/03/15 22:30:43 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-t"  [ F:\Users\ROOT\Documents\orcad\elecdigital\problem1 - asli\p2-schematic1-t.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mbreakn         Mbreakp         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 05/03/15 22:30:43 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-t"  [ F:\Users\ROOT\Documents\orcad\elecdigital\problem1 - asli\p2-schematic1-t.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03164)    4.9983 (N08874)    5.0000 (N09421)     .1270 (N13771)    5.0000     
+
+(N13783)    4.0000 (N14091)    5.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -2.399E-04
+    V_V1        -1.000E-05
+    V_V2        -1.613E-07
+    V_V3        -2.842E-11
+
+    TOTAL POWER DISSIPATION   1.01E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

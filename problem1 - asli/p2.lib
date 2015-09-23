@@ -1,0 +1,22 @@
+* PSpice Model Editor - Version 9.2
+
+*$
+.model Mbreakn NMOS
+kn=1000u,
+vt0=1.5,
+L=2u,
+W=4u
+*$
+.model Mbreakp PMOS
+kp=1000u,
+vt0=1.5,
+L=2u,
+W=4u
+*$
+.model Mbreakp-1 PMOS
+kp=1000i,
+vt0=1.5,
+L=1.5u,
+W=2u
+
+*$

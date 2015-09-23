@@ -1,0 +1,45 @@
+
+**** 05/02/15 00:12:46 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-t"  [ F:\Users\ROOT\Documents\orcad\elecdigital\problem2\p2-schematic1-t.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "p2-schematic1-t.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+.LIB ".\p2.lib" 
+* From [PSPICE NETLIST] section of F:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN v2 0 10 .01 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\p2-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING p2-SCHEMATIC1.net ****
+* source P2
+M_M14         V0 VI N08874 N08874 MbreakP           
+M_M7         V0 VI 0 0 Mbreakn           
+V_V3         N08874 0 5Vdc
+C_C1         0 V0  1n  
+R_R1         0 V0  10k  
+V_V7         VI 0  
++PULSE 0 5 0 0 0 .1m .2m
+
+**** RESUMING p2-schematic1-t.sim.cir ****
+.END
+
+
+ERROR -- DC device v2 is undefined

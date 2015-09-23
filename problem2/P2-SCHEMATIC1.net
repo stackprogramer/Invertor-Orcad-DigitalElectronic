@@ -1,0 +1,7 @@
+* source P2
+C_C1         0 N03164  50p  
+M_M14         N03164 N02948 N08874 N08874 Mbreakp           
+M_M7         N03164 N02948 0 0 Mbreakn           
+V_V1         N02948 0  
++PULSE 0 5 .001m 80u 80um .1m .3m
+V_V3         N08874 0 5Vdc
